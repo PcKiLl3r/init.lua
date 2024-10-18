@@ -1,6 +1,6 @@
-require("theprimeagen.set")
-require("theprimeagen.remap")
-require("theprimeagen.lazy_init")
+require("pckill3r.set")
+require("pckill3r.remap")
+require("pckill3r.lazy_init")
 
 -- DO.not
 -- DO NOT INCLUDE THIS
