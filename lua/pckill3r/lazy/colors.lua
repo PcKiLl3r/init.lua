@@ -13,14 +13,6 @@ return {
     },
 
     {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        opts = {},
-        config = function()
-            ColorMyPencils()
-        end
-    },
-    {
         "ellisonleao/gruvbox.nvim",
         name = "gruvbox",
         config = function()
@@ -71,7 +63,15 @@ return {
             })
         end
     },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        opts = {},
+        config = function()
+            ColorMyPencils("tokyonight")
 
+        end
+    },
     {
         "rose-pine/neovim",
         name = "rose-pine",
