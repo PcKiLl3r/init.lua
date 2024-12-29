@@ -1,4 +1,5 @@
 return {
+--[[
     "theprimeagen/vim-be-good",
 
     dependencies = {
@@ -7,6 +8,7 @@ return {
 
     config = function()
     end
+    ]]--
 }
 
 
