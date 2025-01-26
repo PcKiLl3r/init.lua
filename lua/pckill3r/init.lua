@@ -2,6 +2,8 @@ require("pckill3r.set")
 require("pckill3r.remap")
 require("pckill3r.lazy_init")
 
+--require('pckill3r.lazy.todoSeeker').setup()
+
 -- DO.not
 -- DO NOT INCLUDE THIS
 
