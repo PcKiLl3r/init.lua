@@ -40,10 +40,21 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = PcKillerGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
+})
+
+autocmd('BufEnter', {
+    group = PcKillerGroup,
+    callback = function()
+        if vim.bo.filetype ~= "zig" then
+            vim.cmd.colorscheme("tokyonight-night")
+        else
+            vim.cmd.colorscheme("rose-pine-moon")
+        end
+    end
 })
 
 autocmd('LspAttach', {
@@ -66,3 +77,5 @@ autocmd('LspAttach', {
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+vim.g.netrw_localmovecmd = 'mv'
