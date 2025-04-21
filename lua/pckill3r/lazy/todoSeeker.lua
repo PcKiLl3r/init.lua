@@ -33,6 +33,6 @@ return {
         end
 
         vim.api.nvim_create_user_command('FindTodos', find_todos, {})
-        vim.keymap.set('n', '<C-t>', function() find_todos() end, { noremap = true, silent = true })
+        --vim.keymap.set('n', '<Leader-t>', function() find_todos() end, { noremap = true, silent = true })
     end
 }

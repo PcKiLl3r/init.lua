@@ -1,0 +1,6 @@
+-- Filetype extensions
+-- vim.filetype.add({
+--   extension = {
+--     templ = "templ",
+--   },
+-- })
