@@ -10,7 +10,7 @@ return {
       require("nvim-treesitter.configs").setup({
         -- ✅ Parsers to install
         ensure_installed = {
-          "vimdoc", "javascript", "typescript", "c", "lua", "rust",
+          "vimdoc", "javascript", "typescript", "tsx", "c", "lua", "rust",
           "jsdoc", "bash", "python", "angular", "scss",
         },
 
@@ -24,24 +24,25 @@ return {
         highlight = {
           enable = true,
 
+          disable = {},
           -- Disable for large files or known problematic languages
-          disable = function(lang, buf)
-            if lang == "html" then
-              print("Treesitter disabled for HTML (conflict prevention)")
-              return true
-            end
-
-            local max_filesize = 100 * 1024 -- 100 KB
-            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-            if ok and stats and stats.size > max_filesize then
-              vim.notify(
-                "Treesitter disabled (file >100KB)",
-                vim.log.levels.WARN,
-                { title = "Treesitter" }
-              )
-              return true
-            end
-          end,
+          -- disable = function(lang, buf)
+          --   if lang == "html" then
+          --     print("Treesitter disabled for HTML (conflict prevention)")
+          --     return true
+          --   end
+          --
+          --   local max_filesize = 100 * 1024 -- 100 KB
+          --   local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+          --   if ok and stats and stats.size > max_filesize then
+          --     vim.notify(
+          --       "Treesitter disabled (file >100KB)",
+          --       vim.log.levels.WARN,
+          --       { title = "Treesitter" }
+          --     )
+          --     return true
+          --   end
+          -- end,
 
           additional_vim_regex_highlighting = { "markdown", "yaml" },
         },

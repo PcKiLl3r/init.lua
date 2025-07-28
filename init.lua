@@ -13,3 +13,16 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         end
     end,
 })
+
+-- local preload_ts = vim.api.nvim_create_augroup("PreloadTS", {})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   group = preload_ts,
+--   once = true,
+--   callback = function()
+--     vim.cmd("vsplit | enew")
+--     vim.bo.filetype = "typescript"
+--     vim.defer_fn(function()
+--       vim.cmd("close")
+--     end, 500)
+--   end,
+-- })

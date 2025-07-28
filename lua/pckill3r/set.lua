@@ -1,5 +1,6 @@
 -- Cursor
 vim.opt.guicursor = ""
+-- vim.opt.guicursor=a:blinkon100
 
 -- Line numbers
 vim.opt.number = true
