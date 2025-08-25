@@ -39,7 +39,20 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Format buffer using LSP
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+
+-- Force refresh treesitter context
+vim.keymap.set("n", "<leader>tc", function()
+  require("treesitter-context").enable()
+end, { desc = "Enable treesitter context" })
+
+-- Format with conform.nvim
+vim.keymap.set("n", "<leader>f", function()
+  require("conform").format({ 
+    bufnr = vim.api.nvim_get_current_buf(),
+    lsp_fallback = true 
+  })
+end, { desc = "Format buffer" })
 
 -- Quickfix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -67,11 +80,21 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+-- GLOW
+vim.keymap.set("n", "<leader>mp", "<cmd>Glow<CR>", { desc = "Markdown: preview (Glow)" })
 
---[[vim.keymap.set(
-    "n",
-    "<leader>ee",
-    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
-)]]--
+-- Peek
+-- Toggle Peek preview
+vim.keymap.set("n", "<leader>pp", function()
+  local peek = require("peek")
+  if peek.is_open() then
+    peek.close()
+  else
+    peek.open()
+  end
+end, { desc = "Peek: toggle preview" })
 
---vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/pckill3r/packer.lua<CR>");
+-- Obsidian
+vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<CR>",    { desc = "Obsidian: New note" })
+vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianToday<CR>",  { desc = "Obsidian: Today note" })
+vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<CR>", { desc = "Obsidian: Search notes" })

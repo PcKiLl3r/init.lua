@@ -3,9 +3,7 @@
 return {
   {
     "folke/trouble.nvim", -- 🚨 Diagnostics + list viewer (LSP, QF, etc.)
-
     config = function()
-      -- 🔧 Setup with minimal icons
       require("trouble").setup({
         icons = false, -- Set to true if you want fancy symbols
       })

@@ -1,3 +1,7 @@
+-- early in init.lua / plugin `init()` (lazy) / `setup()` (packer)
+local cwd = vim.loop.fs_realpath(vim.loop.cwd() or vim.fn.getcwd())
+vim.g.augment_workspace_folders = { cwd }
+
 -- Load main configuration module
 require("pckill3r")
 
