@@ -4,9 +4,9 @@ return {
   {
     "folke/trouble.nvim", -- 🚨 Diagnostics + list viewer (LSP, QF, etc.)
     config = function()
-      require("trouble").setup({
-        icons = false, -- Set to true if you want fancy symbols
-      })
+      -- require("trouble").setup({
+      --   icons = false, -- Set to true if you want fancy symbols
+      -- })
 
       local trouble = require("trouble")
 

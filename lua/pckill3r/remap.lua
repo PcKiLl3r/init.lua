@@ -48,9 +48,9 @@ end, { desc = "Enable treesitter context" })
 
 -- Format with conform.nvim
 vim.keymap.set("n", "<leader>f", function()
-  require("conform").format({ 
+  require("conform").format({
     bufnr = vim.api.nvim_get_current_buf(),
-    lsp_fallback = true 
+    lsp_fallback = true
   })
 end, { desc = "Format buffer" })
 

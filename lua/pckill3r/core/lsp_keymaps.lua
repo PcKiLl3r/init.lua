@@ -17,5 +17,7 @@ autocmd("LspAttach", {
     map("i", "<C-h>", vim.lsp.buf.signature_help, opts)
     map("n", "[d", vim.diagnostic.goto_next, opts)
     map("n", "]d", vim.diagnostic.goto_prev, opts)
+
+
   end,
 })
