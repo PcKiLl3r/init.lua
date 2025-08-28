@@ -39,3 +39,5 @@ vim.opt.isfname:append("@-@")
 
 -- Update time
 vim.opt.updatetime = 50
+
+vim.opt.conceallevel = 1

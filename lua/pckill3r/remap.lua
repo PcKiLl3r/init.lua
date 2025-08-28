@@ -98,3 +98,10 @@ end, { desc = "Peek: toggle preview" })
 vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<CR>",    { desc = "Obsidian: New note" })
 vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianToday<CR>",  { desc = "Obsidian: Today note" })
 vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<CR>", { desc = "Obsidian: Search notes" })
+
+-- Set netrw directory as project root and search from there
+vim.keymap.set("n", "<leader>pr", function()
+    local current_dir = vim.fn.expand('%:p:h')
+    vim.cmd('cd ' .. current_dir)
+    require('telescope.builtin').find_files({ cwd = current_dir })
+end, { desc = "Set current dir as root and find files" })

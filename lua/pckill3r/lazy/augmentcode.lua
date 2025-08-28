@@ -7,8 +7,25 @@ return {
 
 vim.g.augment_workspace_folders = {
   "/home/zorko/work/codeoath/WorkOath",
-  "/home/zorko/work/agenda/zrsz/zrsz-urban",
-  "/home/zorko/.dotfiles/nvim/.config/nvim",
+  "/home/zorko/.dotfiles",
+  -- "/home/zorko/.dotfiles/nvim",
+  -- "/home/zorko/.dotfiles/bin",
+  -- "/home/zorko/.dotfiles/hypr",
+  -- "/home/zorko/.dotfiles/i3",
+  -- "/home/zorko/.dotfiles/shell",
+  -- "/home/zorko/.dotfiles/xkb",
+  -- "/home/zorko/.dotfiles/zsh",
+  -- "/home/zorko/.dotfiles/machine",
+  -- "/home/zorko/.dotfiles/vpn",
+  -- "/home/zorko/.dotfiles/treesitter",
+  -- "/home/zorko/.dotfiles/tmux",
+  "/home/zorko/personal/custom-dev-exp/linux-dev-playbook",
+}
+
+vim.g.augment_ignore_patterns = {
+      "**/node_modules/**",
+  -- "/home/zorko/.dotfiles/work/**",
+  -- "/home/zorko/.dotfiles/projects/**",
 }
 
     -- Required: set your API key (from https://augmentcode.com/)

@@ -18,6 +18,14 @@ autocmd("LspAttach", {
     map("n", "[d", vim.diagnostic.goto_next, opts)
     map("n", "]d", vim.diagnostic.goto_prev, opts)
 
+-- -- Pseudocode – only if the plugin exposes such a helper.
+-- vim.keymap.set("n", "<leader>fr", function()
+--   local old = vim.fn.expand("%:p")
+--   local new = vim.fn.input("Rename to: ", old, "file")
+--   if new ~= "" and new ~= old then
+--     require("lsp-file-operations").rename(old, new) -- hypothetical
+--   end
+-- end, { desc = "LSP-aware file rename" })
 
   end,
 })
