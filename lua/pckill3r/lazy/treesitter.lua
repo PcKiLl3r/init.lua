@@ -8,7 +8,13 @@ return {
 
     config = function()
       -- Temporarily treat markdown as regex-only to avoid extmark range bugs during edits.
-      local disable_lang = { markdown = true, markdown_inline = true }
+-- Temporarily treat markdown and conf files as regex-only to avoid extmark range bugs during edits.
+local disable_lang = {
+  markdown = true,
+  markdown_inline = true,
+  conf = true,  -- Add this line
+  hyprlang = true  -- Add this if you have hyprlang parser
+}
 
       require("nvim-treesitter.configs").setup({
         ensure_installed = {

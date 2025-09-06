@@ -8,6 +8,7 @@ return {
 vim.g.augment_workspace_folders = {
   "/home/zorko/work/codeoath/WorkOath",
   "/home/zorko/.dotfiles",
+  "/home/zorko/personal/custom-dev-exp/linux-dev-playbook",
   -- "/home/zorko/.dotfiles/nvim",
   -- "/home/zorko/.dotfiles/bin",
   -- "/home/zorko/.dotfiles/hypr",
@@ -19,7 +20,6 @@ vim.g.augment_workspace_folders = {
   -- "/home/zorko/.dotfiles/vpn",
   -- "/home/zorko/.dotfiles/treesitter",
   -- "/home/zorko/.dotfiles/tmux",
-  "/home/zorko/personal/custom-dev-exp/linux-dev-playbook",
 }
 
 vim.g.augment_ignore_patterns = {
