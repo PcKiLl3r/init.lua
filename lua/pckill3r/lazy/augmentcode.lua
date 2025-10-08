@@ -6,9 +6,9 @@ return {
     -- vim.g.augment_workspace_folders = { cwd }
 
 vim.g.augment_workspace_folders = {
-  "/home/zorko/work/codeoath/WorkOath",
-  "/home/zorko/.dotfiles",
-  "/home/zorko/personal/custom-dev-exp/linux-dev-playbook",
+  -- "/home/zorko/work/codeoath/WorkOath",
+  "/home/pckill3r/.dotfiles",
+  "/home/pckill3r/personal/linux-dev-playbook",
   -- "/home/zorko/.dotfiles/nvim",
   -- "/home/zorko/.dotfiles/bin",
   -- "/home/zorko/.dotfiles/hypr",
