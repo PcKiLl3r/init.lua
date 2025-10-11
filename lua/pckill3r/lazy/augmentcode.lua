@@ -6,7 +6,9 @@ return {
     -- vim.g.augment_workspace_folders = { cwd }
 
 vim.g.augment_workspace_folders = {
-  -- "/home/zorko/work/codeoath/WorkOath",
+  "/home/pckill3r/work/codeoath/WorkOath",
+  -- "/home/pckill3r/work/codeoath/react-vite-template/src/ui-components",
+  "/home/pckill3r/work/codeoath/react-vite-template",
   "/home/pckill3r/.dotfiles",
   "/home/pckill3r/personal/linux-dev-playbook",
   -- "/home/zorko/.dotfiles/nvim",
@@ -29,7 +31,7 @@ vim.g.augment_ignore_patterns = {
 }
 
     -- Required: set your API key (from https://augmentcode.com/)
-    vim.g.augment_api_key = os.getenv("AUGMENT_API_KEY") or "your-api-key-here"
+    -- vim.g.augment_api_key = os.getenv("AUGMENT_API_KEY") or "your-api-key-here"
 
     -- Optional: keymaps
 -- Lua mapping examples

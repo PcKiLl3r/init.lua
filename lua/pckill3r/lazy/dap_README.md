@@ -26,7 +26,7 @@
 - **Chrome doesn't connect**: Ensure `ng serve` is running on `localhost:4200`
 
 ### What Gets Debugged
-✅ TypeScript component logic  
-✅ Service methods  
-✅ Lifecycle hooks (`ngOnInit`, etc.)  
+✅ TypeScript component logic
+✅ Service methods
+✅ Lifecycle hooks (`ngOnInit`, etc.)
 ❌ HTML templates (use browser DevTools for DOM debugging)

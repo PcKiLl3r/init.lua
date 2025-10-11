@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+session=$(tmux display-message -p '#S')
+
+# Create tmux windows
+tmux new-window -t $session:1 -n 'vim'
+tmux send-keys -t $session:1 'cd src' C-m
+tmux send-keys -t $session:1 'vim .' C-m
+
+tmux new-window -t $session:4 -n 'shell'
+tmux send-keys -t $session:4 'zsh' C-m
+
+# Focus first window
+tmux select-window -t $session:1
