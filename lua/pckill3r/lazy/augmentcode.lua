@@ -39,5 +39,19 @@ vim.keymap.set('n', '<leader>ac', ':Augment chat<CR>', { desc = 'Augment chat' }
 vim.keymap.set('v', '<leader>ac', ':Augment chat<CR>', { desc = 'Augment chat (visual)' })
 vim.keymap.set('n', '<leader>an', ':Augment chat-new<CR>', { desc = 'Augment chat new' })
 vim.keymap.set('n', '<leader>at', ':Augment chat-toggle<CR>', { desc = 'Augment chat toggle' })
+
+
+    -- Prevent accidental window changes in Augment chat
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "augment-chat",
+      callback = function()
+        local opts = { buffer = true, silent = true }
+        -- Disable problematic keymaps in chat window
+        vim.keymap.set('n', '<leader>pv', '<nop>', opts)
+        vim.keymap.set('n', '<C-f>', '<nop>', opts)
+        -- Add easy toggle back
+        vim.keymap.set('n', '<leader>q', ':Augment chat-toggle<CR>', opts)
+      end,
+    })
   end,
 }
